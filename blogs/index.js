@@ -1,9 +1,9 @@
 const index=()=>{
-    window.location.pathname="index.html"
+    window.location.pathname="blog/index.html"
 }
 const about=()=>{
-    window.location.pathname="about.html"
+    window.location.pathname="blog/about.html"
 }
 function contact(){
-    window.location.pathname="contact.html"
+    window.location.pathname="blog/contact.html"
 }
