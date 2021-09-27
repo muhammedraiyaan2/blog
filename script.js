@@ -1,21 +1,8 @@
-function login() {
-    if (localStorage.getItem("Name") == null) {
-        let name = prompt("Enter your name")
-        localStorage.setItem("Name", name)
-    }
-    else if (localStorage.getItem("Name") == "") {
-        let name = prompt("Enter your name")
-        localStorage.setItem("Name", name)
-    }
-    else if (localStorage.getItem("Name") != "") {
-        alert("Already logged in")
-    }
-}
-if (localStorage.getItem("Name") == null) {
-    localStorage.setItem("Name", "")
-}
 function logout() {
+if(localStorage.getItem("Name") != null){
     localStorage.clear()
+    localStorage.removeItem('Name')
+}
     if (localStorage.getItem("Name") == null) {
         localStorage.setItem("Name", "")
     }
