@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="Muhammad Raiyaan">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <meta charset="UTF-8">
+    <meta name="description" content="How to covert .py to .exe file">
+    <meta name="keywords" content="How to covert images/py to exe file">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog- How to covert .py to .exe file</title>
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .heading-github {
+            font-size: 30px;
+            margin-top: -30px;
+        }
+        .heading-github:hover{
+            text-decoration: none;
+        }
+        .image_size {
+            height: 15%;
+            margin: auto;
+            width: 70%;
+        }
+
+        p {
+            margin-left: 5px;
+            font-size: 20px;
+        }
+
+        @media screen and (max-width:700px) {
+            .heading-github {
+                font-size: 20px;
+                margin-top: 5px;
+                margin-bottom: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-local text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <a onclick="index()"><img id="icon" src="icon.png"
+                        style="height:50px; width:50px; border-radius: 1000px;" alt="icon"></a>
+                <span class="ml-3 text-xl"><a class="ml-3 text-xl" style="margin-top: -20px; margin-left: -7px;"
+                        onclick="index()">Blog</a></span>
+            </a>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a onclick="index()" class="mr-5 hover:text-gray-900">Home</a>
+                <a onclick="about()" class="mr-5 hover:text-gray-900">About us</a>
+                <a onclick="contact()" class="mr-5 hover:text-gray-900">Contact us</a>
+            </nav>
+            </button>
+        </div>
+    </header>
+    <h1 class="heading-github text-center">How to covert .py file to .exe (6 STEPS)</h1><br><br>
+    <dl>
+        <dt>
+            <h1 class="heading-github">Steps:</h1>
+        </dt><br>
+        <dd>
+            <p>1. Open powershell or command prompt</p>
+            <p>2. Write pip install pyinstaller in terminal and press enter then you can use pyinstaller if it's showing
+                pip is not recognized as the internal or the external command then go to this <a target="_blank" style="color: blue;"
+                    href="blog2.html">Link</a></p>
+            <img src="images/pip install pyinstaller.png" alt="image" class="image_size">
+            <p>3. Open the folder where you want to convert the file After opening the folder type in the address bar powershell or cmd and press enter and you can able to open terminal in the folder
+            <img src="images/url address bar.png" alt="image" class="image_size">
+            <p>4. Write pyinstaller --onefile file_name and press enter. After writing pyinstaller --onefile write your file name as .\file_name a shortcut for this is you have to write first 4 letter of the file name and press tab and the terminal will auto correct it</p>
+            <img src="images/pyinstaller --onefile file_name.png" alt="image" class="image_size">
+            <p>5. After some seconds the exe file is ready. There will created some folder like build and dist etc. Go to dist folder and there you can get your exe</p>
+            <img src="images/ready exe.png" class="image_size" alt="image">
+            <p>6. When you run this program it will exit file automatically You can solve this by one solution that is in the .py file of the project you have to add a blank input in python and you have to save it. Uninstall the program in the dist folder and open terminal again and follow the same steps that you have follwed before</p>
+            </p>
+        </dd>
+    </dl>
+    <!-- footer -->
+    <footer class="text-gray-600 body-font bg-grey-100">
+        <div
+            class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+        </div>
+        </div>
+        <div class="bg-gray-100">
+            <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+                <p class="text-gray-500 text-sm text-center sm:text-left"><img src="icon.png"
+                        style="height:50px; display: inline-block; width:50px" alt="icon"> <span
+                        class="ml-3 text-xl">Blog</span> © 2021 BLog</p>
+                <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+                    <a class="text-gray-500">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-500">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path
+                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-500">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-500">
+                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path stroke="none"
+                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                            </path>
+                            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                        </svg>
+                    </a>
+                    <!-- github -->
+                    <i style="margin-left: 7px; margin-top: 2px;" class="fab fa-github"></i>
+                </span>
+            </div>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

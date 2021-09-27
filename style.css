@@ -12,6 +12,11 @@
     font-size: 30px;
     color: slategray;
 }
+.log-in-out{
+    display: inline-block; 
+    margin-left: 45%; 
+    margin-top: 20px;
+}
 .num-blog{
     font-size: 40px;
 }
@@ -29,7 +34,15 @@
 .heading:hover{
     text-decoration: underline;
 }
-@media  screen and (max-width:700px){
+@media  screen and (min-width: 100px) and (max-width:700px){
+    .log-in-out{
+        display:block;
+        margin-top: 10px;
+    }
+    .login-btn{
+        display: block;
+        /* margin-right: 30px; */
+    }
     .typing{
         font-size: 25px;
     }

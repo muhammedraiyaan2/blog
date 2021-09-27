@@ -54,7 +54,7 @@ function feedback() {
     }
 }
 let i = 0
-let txt = `${localStorage.getItem("Name")} Welcome to the blog`
+let txt = `Hi ${localStorage.getItem("Name")} welcome to the blog`
 let speed = 50
 let txt2 = `Blogs`
 function typeWriter() {
