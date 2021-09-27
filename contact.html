@@ -115,18 +115,21 @@
     let form=document.getElementById("form")
     form.style.display="none"
     const hideShow=()=>{
-      if(form.style.display=="none"){
+      if(form.style.display=="none" && window.innerWidth>700){
         form.style.display="block"
+      }
+      else if(form.style.display=="none" && window.innerWidth<700){
+        alert("Sorry sir/mam you can't send the message from phone you have to use laptop")
       }
       else{
         form.style.display="none"
       }
     }
-    let alert=document.getElementById("alert");
-    alert.style.display="none"
+    let alerts=document.getElementById("alert");
+    alerts.style.display="none"
     let submit=document.getElementById('submit')
     submit.addEventListener("click",function(){
-      alert.style.display="block"        
+      alerts.style.display="block"        
       setTimeout(() => {
         alert.style.display="none"
       }, 2500);
