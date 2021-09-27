@@ -51,7 +51,8 @@
   </header>
   <h1 class="contact text-center">Mail: muhammedraiyaan2@gmail.com</h1>
   <h1 class="contact text-center">Github: https://github.com/muhammedraiyaan2</h1><br><br>
-  <button class="mx-5 btn btn-danger" onclick="hideShow()">Message us</button><br><br>
+  <button class="mx-5 btn btn-danger" id="messageUs" onclick="hideShow()">Message us</button>
+  <br><h1 id="message2">You can't send message in the phone or tablet you have to use laptop</h1><br><br>
   <form id="form" class="mx-5" method="POST" action="mailto:muhammedraiyaan2@gmail.com">
     <label for="Name" class="form-label">Name:</label>
     <input type="text" class="form-control" id="Name" name="Name" placeholder="Enter your name">
@@ -115,11 +116,8 @@
     let form=document.getElementById("form")
     form.style.display="none"
     const hideShow=()=>{
-      if(form.style.display=="none" && window.innerWidth>700){
+      if(form.style.display=="none" && window.innerWidth>800){
         form.style.display="block"
-      }
-      else if(form.style.display=="none" && window.innerWidth<700){
-        alert("Sorry sir/mam you can't send the message from phone you have to use laptop")
       }
       else{
         form.style.display="none"
@@ -128,6 +126,13 @@
     let alerts=document.getElementById("alert");
     alerts.style.display="none"
     let submit=document.getElementById('submit')
+    let message2=document.getElementById("message2")
+    message2.style.display="none"
+    if(window.innerWidth<700){
+      let btn=document.getElementById("messageUs")
+      btn.style.display="none"
+      message2.style.display="block"
+    }
     submit.addEventListener("click",function(){
       alerts.style.display="block"        
       setTimeout(() => {
