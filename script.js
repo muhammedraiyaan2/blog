@@ -1,6 +1,5 @@
 function logout() {
 if(localStorage.getItem("Name") != null){
-    localStorage.clear()
     localStorage.removeItem('Name')
 }
     if (localStorage.getItem("Name") == null) {
