@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <meta charset="UTF-8">
+    <meta name="description" content="Command Prompt cool tricks">
+    <meta name="keywords" content="Command Prompt cool tricks">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Command Prompt cool tricks</title>
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <meta name="author" content="Muhammad Raiyaan">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .heading {
+            font-size: 30px;
+            margin-top: -30px;
+            color: black;
+        }
+        .heading:hover{
+            text-decoration: none;
+        }
+        .image_size {
+            height: 15%;
+            margin: auto;
+            width: 70%;
+        }
+
+        p {
+            margin-left: 5px;
+            font-size: 20px;
+        }
+
+        @media screen and (max-width:700px) {
+            .heading {
+                font-size: 20px;
+                margin-top: 5px;
+                margin-bottom: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-local text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <a onclick="index()"><img id="icon" src="icon.png"
+                        style="height:50px; width:50px; border-radius: 1000px;" alt="icon"></a>
+                <span class="ml-3 text-xl"><a class="ml-3 text-xl" style="margin-top: -20px; margin-left: -7px;"
+                        onclick="index()">Blog</a></span>
+            </a>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a onclick="index()" class="mr-5 hover:text-gray-900">Home</a>
+                <a onclick="about()" class="mr-5 hover:text-gray-900">About us</a>
+                <a onclick="contact()" class="mr-5 hover:text-gray-900">Contact us</a>
+            </nav>
+            </button>
+        </div>
+    </header>
+    <h1 class="heading text-center">Command Prompt cool tricks</h1><br><br>
+<br><br>
+    <dl>
+        <dt>
+            <h1 class="heading">Tricks:</h1>
+        </dt>
+        <dd>
+          <p>1. Changing the text color in command prompt. Write help color and you can get some numbers like 1 2 3 etc and letters like a b c etc. If you want light green color then write color a. What color you want you can change the color by the color code.</p>
+          <img src="images/command prompt changing the color.png" alt="image" class="image_size">
+          <p>2. Change the title of the command prompt. You write title and title name example title Hacking the system.</p>
+          <img src="images/command prompt changing the title.png" alt="image" class="image_size">
+          <p>3. Changing the title input of command prompt. You can chnage the title input by this command write prompt and write the title name and write $G example prompt Hacker$G and press enter you can see the change.</p>
+          <img src="images/command prompt changing the title input.png" class="image_size" alt="image">
+          <p>4. Hide or show a folder. You can hide or show a folder with command prompt you have to open the command prompt in that folder where you want to hide the folder you can simply write cmd in the url bar and you can able to open command prompt in that folder and write Attrib +h +s +r folder_name and you can hide the folder. If you want to show that folder then write Attrib -h -s -r folder_name. If you have hide the folder and you want to access the folder then go to the parent folder and write back slash write the folder name</p>
+          <br><p>5. Copy the output. If you want to copy command text you can use this trick that is example help color | clip. The help color will copy.</p>
+          <img src="images/command prompt copy.png" alt="image" class="image_size">
+          <p>6. Want to know the Ip address of your computer then write ipconfig</p>
+          <img src="images/command prompt ipconfig.png" alt="image" class="image_size">
+          <p>7. See the history of command prompt press F7 on your keyboard</p>
+          <img src="images/command prompt history.png" alt="image" class="image_size">
+          <p>8. Make a folder name con it will show you error but you can create the this folder by simple command in command prompt that is md con\ and press enter and you able to create the folder name con and you can challenge your friend 😜.</p>
+          <p>9. You can see the installed programs with command prompt write wmic product get name and press enter it takes some time but it will print the programs details.</p>
+          <img src="images/command prompt programs list.png" alt="image" class="image_size">
+        </dd>
+    </dl>
+    <!-- footer -->
+    <footer class="text-gray-600 body-font bg-grey-100">
+        <div
+            class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+        </div>
+        </div>
+        <div class="bg-gray-100">
+            <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+                <p class="text-gray-500 text-sm text-center sm:text-left"><img src="icon.png"
+                        style="height:50px; display: inline-block; width:50px" alt="icon"> <span
+                        class="ml-3 text-xl">Blog</span> © 2021 BLog</p>
+                <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+                    <a class="text-gray-500">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-500">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path
+                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-500">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-500">
+                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path stroke="none"
+                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                            </path>
+                            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                        </svg>
+                    </a>
+                    <!-- github -->
+                    <i style="margin-left: 7px; margin-top: 2px;" class="fab fa-github"></i>
+                </span>
+            </div>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
