@@ -49,9 +49,6 @@ async function feedback(){
     let rest = await fetch("https://blog-c7e27-default-rtdb.firebaseio.com/Feedback.json",
     {
         method:"POST",
-        headers: {
-            "Content-Type":"application/json",
-        }, 
         body: JSON.stringify(js)
     })
 }
