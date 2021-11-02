@@ -34,12 +34,14 @@
             </button>
         </div>
     </header>
-    <div class="mb-3 mx-5">
+    <form class="mb-3 mx-5">
         <label for="Name">Name</label><br><br>
-        <input class="form-control" name="Name" id="Name" placeholder="Enter your name">
+        <input type="text" class="form-control" name="Name" id="Name" placeholder="Enter your name" required><br>
+        <input type="Email" class="form-control" name="Email" id="Email" placeholder="Enter your Email"><br>
+        <input type="number" class="form-control" name="Age" id="Age" placeholder="Enter your phone number">
         <!-- <label for="">Name</label>
       <input type="text" name="Name" id="Name" placeholder="Enter your name"> -->
-        <br><button onclick="login()" class="btn btn-outline-primary">Login</button>
+        <br><button onclick="login()" id="log" class="btn btn-outline-primary">Login</button>
         <br><br>
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             <strong>Success</strong> Successfully logged in.
@@ -47,7 +49,7 @@
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
-    </div>
+    </form>
     <!-- footer -->
     <footer class="text-gray-600 body-font bg-grey-100">
         <div
@@ -99,14 +101,35 @@
     </footer>
     <!-- script -->
     <script>
-    let alerts = document.querySelector('div.alert')
-        function alertss(){
+        let alerts = document.querySelector('div.alert')
+        function alertss() {
             alerts.style.display = "block"
             setTimeout(() => {
                 alerts.style.display = "none"
             }, 2500);
         }
         alerts.style.display = "none"
+        let log = document.getElementById('log')
+        let Emails = document.getElementById('Email')
+        let Ages=document.getElementById('Age');
+        const database = async (e) => {
+            e.preventDefault()
+            let na=document.getElementById('Name')
+            let js={
+                Name:na.value,
+                Email:Emails.value,
+                phoneNumber:Ages.value
+            }
+            let rest = await fetch("https://blog-c7e27-default-rtdb.firebaseio.com/Login.json",
+            {
+                method:"POST",
+                headers: {
+                    "Content-Type":"application/json",
+                }, 
+                body: JSON.stringify(js)
+            })
+        }
+        log.addEventListener('click', database)
         function login() {
             if (localStorage.getItem("Name") == null) {
                 let name = document.getElementById("Name").value;
@@ -118,7 +141,7 @@
                 localStorage.setItem("Name", name)
                 alertss()
             }
-            else if (localStorage.getItem("Name") != null){
+            else if (localStorage.getItem("Name") != null) {
                 alert("Already logged in")
             }
             else if (localStorage.getItem("Name") != "") {
