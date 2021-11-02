@@ -43,6 +43,7 @@ async function feedback(){
         alert("Sir/Mam can't understand please try again 😅")
     }
     let js={
+        Name:localStorage.getItem("Name"),
         FeedBack:feedback,
         Query:query,
     }
