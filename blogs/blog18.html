@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <meta charset="UTF-8">
+    <meta name="description" content="Learn how to use Visual Studio Code">
+    <meta name="keywords" content="Learn how to use Visual Studio Code">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Learn how to use Visual Studio Code</title>
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <meta name="author" content="Muhammad Raiyaan">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .heading {
+            font-size: 23px;
+            margin-top: -30px;
+            color: black;
+            font-weight: bold;
+        }
+
+        .headings {
+            font-size: 23px;
+            margin-top: -30px;
+            color: black;
+            font-weight: bold;
+        }
+
+        .image_size {
+            height: 15%;
+            margin: auto;
+            margin-top: 10px;
+            width: 70%;
+            border: 2px solid #e6e6e6;
+            padding: 7px;
+            border-radius: 12px;
+        }
+
+        kbd {
+            /* background-color: #e96363; */
+            background-image: radial-gradient(circle, lightgreen, rgb(52, 183, 226));
+            padding: 5px 5px;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .description {
+            text-align: center;
+            font-size: 20px;
+            margin-left: 5px;
+        }
+
+        .a {
+            color: #0d6efd;
+        }
+
+        p {
+            margin-top: 10px;
+            margin-left: 5px;
+            font-size: 20px;
+        }
+
+        .btn {
+            border-radius: 7px;
+            padding: 10px 20px;
+            margin-left: 10px;
+        }
+
+        .btn-danger {
+            color: #fff;
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .comment {
+            margin-left: 25%;
+            border-bottom: 2px solid red;
+            width: 50%;
+        }
+
+        #comments-display {
+            margin-top: 10px;
+            margin-left: 5%;
+            font-size: 20px;
+            word-wrap: break-word;
+        }
+
+        @media screen and (max-width:700px) {
+            p {
+                font-size: 17px;
+            }
+
+            .headings {
+                font-size: 17px;
+            }
+
+            .heading {
+                font-size: 20px;
+                margin-top: 5px;
+                margin-bottom: 35px;
+            }
+
+            .description {
+                font-size: 17px;
+            }
+
+            .image_size {
+                padding: 5px;
+                width: 90%;
+                border: 1px solid #e6e6e6;
+                border-radius: 6px;
+            }
+        }
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+</head>
+
+<body>
+    <header class="header-local text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <a onclick="index()"><img id="icon" src="icon.png"
+                        style="height:50px; width:50px; border-radius: 1000px;" alt="icon"></a>
+                <span class="ml-3 text-xl"><a class="ml-3 text-xl" style="margin-top: -20px; margin-left: -7px;"
+                        onclick="index()">Blog</a></span>
+            </a>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a onclick="index()" class="mr-5 hover:text-gray-900">Home</a>
+                <a onclick="about()" class="mr-5 hover:text-gray-900">About us</a>
+                <a onclick="contact()" class="mr-5 hover:text-gray-900">Contact us</a>
+            </nav>
+            </button>
+        </div>
+    </header>
+    <h1 class="heading text-center">Learn how to use Visual Studio Code </h1>
+    <p class="description">If you have not installed Visual Studio Code go to <a href="blog16.html" class="a">this
+            link</a></p>
+    <br><br>
+    <dl>
+        <dt>
+            <!-- <h1 class="headings">Steps:</h1><br> -->
+        </dt>
+        <dd>
+            <p><b>1. Changing the theme:</b> If you want to change the theme go to settings and click on color theme and
+                select your theme or press <br> <kbd>Ctrl+k Ctrl+T</kbd></p>
+            <video src="https://muhammedraiyaan2.github.io/Server/vs code how to change the theme.mp4" autoplay loop
+                class="image_size" muted></video>
+            <p><b>2. Opening a folder:</b> If you want to open a folder then click on file and click on open folder or
+                press <kbd>Ctrl+O</kbd></p>
+            <video src="https://muhammedraiyaan2.github.io/Server/open a folder in  vs code - video.mp4" autoplay loop
+                muted class="image_size"></video>
+            <p><b>3. Create a new file in a folder:</b> click on + button and name the file and your file will be
+                created after writing some code press <kbd>Ctrl+S</kbd> to save the file</p>
+            <video src="https://muhammedraiyaan2.github.io/Server/create a new file in vs code - video.mp4" autoplay
+                muted loop class="image_size"></video>
+            <p><b>4. Extension:</b> extensions are used to make your IDE look better and help in many ways like theme,
+                thunder client and Ssh remote etc. Go to extensions or presss <kbd>Ctrl+Shift+X</kbd> in your vs code
+                and search some of extensions name. If you want to want more themes and the icon of the vs code files
+                should be good then install this extension Material theme icon and Community Material theme. Material
+                theme icon is used for making your file iocns look better and Community Material theme is used gives you
+                many themes dark and light etc. After you install the extensions if the extension is not working please
+                reopen your vs code.</p>
+            <video src="https://muhammedraiyaan2.github.io/Server/Theme externsions for vs code - video.mp4" autoplay
+                loop muted class="image_size"></video>
+            <p><b>5. Change keyboard shortcuts:</b> Click on setting and click on Keyboard Shortcuts or press
+                <kbd>Ctrl+K Ctrl+S</kbd> and search what you want to change like I want to change the theme shortcut to
+                <kbd>Alt+C</kbd> instead of <kbd>Ctrl+K Ctrl+T</kbd> search in keyboard shortcuts theme and click on the
+                pencil icon this icon only appear when you hover on the shortcut. And press the key that you want to
+                change the keyboard shortcut and press Enter.
+            </p>
+            <video
+                src="https://muhammedraiyaan2.github.io/Server/change the keyboard shortcut of color theme - video.mp4"
+                autoplay loop muted class="image_size"></video>
+            <p><b>6. Settings:</b> You can change the setting in the vs code you have to go in setting and click on
+                setting or press <kbd>Ctrl+,</kbd> and search the setting and it will show you the setting. Like you can
+                change the zoom of the vs code in mouse like <kbd>Ctrl+MouseWheel</kbd></p>
+            <video src="https://muhammedraiyaan2.github.io/Server/change the setting in vs code - video.mp4" autoplay
+                loop muted class="image_size"></video>
+            <p><b>7. Creating a folder:</b> To created folder follow the same method as you followed in how to create a
+                new file in a opened folder. Now please select the folder button to create folder not file button in vs
+                code expolorer.</p>
+            <video src="https://muhammedraiyaan2.github.io/Server/how to create a folder in vs code - video.mp4"
+                autoplay loop muted class="image_size"></video>
+            <p></p>
+        </dd>
+    </dl>
+    <button title="Like this article" id="like" class="btn btn-danger">Like <i class="far fa-thumbs-up"></i></button>
+    <button title="DisLike this article" id="diskLike" class="btn btn-danger">Dislike <i
+            class="far fa-thumbs-down"></i></button>
+    <h1 id="alert" class="heading">Please login to post a comment</h1>
+   <div id="commentForm">
+    <br><br><input class='comment' type="text" name="comment" id="comment" placeholder="Type your comment here...">
+    <button id="post" class="btn btn-danger">Post</button>
+    <p id="comments-display"></p>
+   </div>
+    <!-- footer -->
+    <footer class="text-gray-600 body-font bg-grey-100">
+        <div
+            class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+        </div>
+        </div>
+        <div class="bg-gray-100">
+            <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+                <p class="text-gray-500 text-sm text-center sm:text-left"><img src="icon.png"
+                        style="height:50px; display: inline-block; width:50px" alt="icon"> <span
+                        class="ml-3 text-xl">Blog</span> © 2021 BLog</p>
+                <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+                    <a class="text-gray-500">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-500">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path
+                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-500">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-500">
+                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path stroke="none"
+                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                            </path>
+                            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                        </svg>
+                    </a>
+                    <!-- github -->
+                    <i style="margin-left: 7px; margin-top: 2px;" class="fab fa-github"></i>
+                </span>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyC5xpk6e63LFEr54aAJuFsnehMDsBOwHJc",
+            authDomain: "blog-c7e27.firebaseapp.com",
+            databaseURL: "https://blog-c7e27-default-rtdb.firebaseio.com",
+            projectId: "blog-c7e27",
+            storageBucket: "blog-c7e27.appspot.com",
+            messagingSenderId: "1004612951688",
+            appId: "1:1004612951688:web:012275f8297624e114493d"
+        };
+
+        // Initialize Firebase
+
+        firebase.initializeApp(firebaseConfig);
+        let btn = document.getElementById("like")
+        let dis = document.getElementById("diskLike")
+        //   localStorage.removeItem("like")
+        // let databasesa=firebase.database()
+        let refe = firebase.database().ref(`Likes/learnvscode`)
+        refe.once('value', function (snapshot) {
+            let datass = snapshot.val();
+            for (let i in datass) {
+                if (localStorage.getItem('like') === null) {
+                    localStorage.setItem('like', 'not')
+                }
+                dis.addEventListener('click', function () {
+                    if (localStorage.getItem('like') == "yes") {
+                        firebase.database().ref(`Likes/learnvscode`).set({
+                            Likes: datass[i] - 1,
+                        })
+                        btn.style.background = "#dc3545 !important"
+                        localStorage.setItem('like', "not")
+                    }
+                })
+                if (localStorage.getItem('like') == "yes") {
+                    btn.addEventListener('click', function () {
+                        firebase.database().ref(`Likes/learnvscode`).set({
+                            Likes: datass[i] - 1,
+                        })
+                        dis.style.background = '#0d6efd'
+                        localStorage.setItem("like", 'not')
+                        location.reload();
+                    })
+                }
+                if (localStorage.getItem('like') == "not") {
+                    btn.addEventListener("click", function () {
+                        localStorage.setItem('like', "yes")
+                        firebase.database().ref(`Likes/learnvscode`).set({
+                            Likes: datass[i] + 1,
+                        })
+                        btn.style.background = '#0d6efd'
+                        location.reload();
+                    })
+                }
+                else {
+                    btn.innerHTML = `Liked <i class="far fa-thumbs-up"></i> ` + datass[i]
+                }
+                setInterval(() => {
+                    if (localStorage.getItem('like') == "not") {
+                        btn.style.background = "#dc3545"
+                    }
+                }, 1);
+                btn.innerHTML = `Like <i class="far fa-thumbs-up"></i> ` + datass[i]
+            }
+        })
+        if (localStorage.getItem('like') == 'yes') {
+            btn.style.background = '#0d6efd'
+        }
+
+        // for dislike
+        let refes = firebase.database().ref(`DisLike/learnvscode`)
+        refes.once('value', function (snapshots) {
+            let datasss = snapshots.val();
+            for (let i in datasss) {
+                if (localStorage.getItem('DisLike') === null) {
+                    localStorage.setItem('DisLike', 'not')
+                }
+                btn.addEventListener('click', function () {
+                    if (localStorage.getItem('DisLike') == "yes") {
+                        firebase.database().ref(`DisLike/learnvscode`).set({
+                            DisLike: datasss[i] - 1,
+                        })
+                        btn.style.background = "#dc3545 !important"
+                        localStorage.setItem('DisLike', "not")
+                    }
+                })
+                if (localStorage.getItem('DisLike') == "not") {
+                    dis.addEventListener('click', function () {
+                        firebase.database().ref(`DisLike/learnvscode`).set({
+                            DiskLike: datasss[i] + 1,
+                        })
+                        dis.style.background = '#0d6efd'
+                        location.reload();
+                        localStorage.setItem("DisLike", 'yes')
+                        if (localStorage.getItem('like') == "yes") {
+                            firebase.database().ref(`Likes/learnvscode`).set({
+                                Likes: datass[i] - 1,
+                            })
+                        }
+                    })
+                }
+                if (localStorage.getItem('DisLike') == "yes") {
+                    dis.addEventListener('click', function () {
+                        firebase.database().ref(`DisLike/learnvscode`).set({
+                            DiskLike: datasss[i] - 1,
+                        })
+                        dis.style.background = '#0d6efd'
+                        localStorage.setItem("DisLike", 'not')
+                        location.reload();
+                    })
+                }
+                else {
+                    dis.innerHTML = `DisLiked <i class="far fa-thumbs-down"></i> ` + datasss[i]
+                }
+                dis.innerHTML = `DisLike <i class="far fa-thumbs-down"></i> ` + datasss[i]
+            }
+        })
+        if (localStorage.getItem('DisLike') == 'yes') {
+            dis.style.background = '#0d6efd'
+        }
+
+        // For Commment
+        let commentFrom=document.getElementById("commentForm")
+        if(localStorage.getItem('Name')=='' || localStorage.getItem('Name')===null){
+            commentFrom.style.display="none"
+        }
+        let comment = document.getElementById("comment")
+        let post = document.getElementById("post")
+        let dc = document.getElementById("comments-display")
+        post.addEventListener("click", function () {
+            firebase.database().ref(`Comments/learnvscode${Math.floor(Math.random() * 999999999)}`).set({
+                comment: comment.value,
+                Name: localStorage.getItem('Name'),
+            })
+            location.reload()
+        })
+        let NName = localStorage.getItem("Name")
+        if (NName == "" || NName === null) {
+            NName = "Name is not specified"
+        }
+        let alert = document.getElementById("alert")
+        if (localStorage.getItem('Name') == "" || localStorage.getItem('Name') === null) {
+            alert.style.marginTop = "20px"
+            alert.style.display = "block"
+        }
+        else {
+            alert.style.display = "none"
+        }
+        let names = "Name is not specified"
+        firebase.database().ref(`Comments`).once('value', function (snapshotss) {
+            let datass = snapshotss.val()
+            for (let i in datass) {
+                console.log(datass[i].comment);
+                names = datass[i].Name
+                if (names == undefined) {
+                    names = "Name is not specified"
+                }
+                dc.innerHTML += `<b>${names}</b>` + " has commented<br>" + datass[i].comment + "<br><br>"
+            }
+        })
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>

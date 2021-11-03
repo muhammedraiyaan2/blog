@@ -1,3 +1,6 @@
+
+
+
 function logout() {
 if(localStorage.getItem("Name") != null){
     localStorage.removeItem('Name')
@@ -47,7 +50,7 @@ async function feedback(){
         FeedBack:feedback,
         Query:query,
     }
-    let rest = await fetch("https://blog-c7e27-default-rtdb.firebaseio.com/Feedback.json",
+    await fetch("https://blog-c7e27-default-rtdb.firebaseio.com/Feedback.json",
     {
         method:"POST",
         body: JSON.stringify(js)
