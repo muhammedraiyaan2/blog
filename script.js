@@ -50,11 +50,13 @@ async function feedback(){
         FeedBack:feedback,
         Query:query,
     }
+    if(feedback == 1 || feedback == 2 || feedback == 3 || feedback == 4 || feedback == 5) {
     await fetch("https://blog-c7e27-default-rtdb.firebaseio.com/Feedback.json",
     {
         method:"POST",
         body: JSON.stringify(js)
     })
+}
 }
 let i = 0
 let txt = `Hi ${localStorage.getItem("Name")} welcome to the blog`

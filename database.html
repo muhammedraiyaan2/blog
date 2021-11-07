@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Blog - DataBase">
+    <meta name="keywords" content="Blog - DataBase">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - DataBase</title>
+    <meta name="author" content="Muhammad Raiyaan">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <style>
+        * {
+            margin: 2px;
+        }
+        .red{
+            color: red;
+        }
+        .green{
+            color: green;
+            margin-top: -30px;
+        }
+        .blue{
+            color: blue;
+            margin-top: -30px;
+        }
+        .display {
+            font-size: 20px;
+            font-family: monospace;
+            font-style: italic;
+        }
+
+        .detail {
+            font-size: 20px;
+            font-family: monospace;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <details class="detail" id="login">
+        <summary>Login</summary>
+    </details>
+    <details class="detail" id="feedback">
+        <summary>FeedBack</summary>
+    </details>
+</body>
+<script>
+    let password = prompt('Enter the password')
+    if(password!="mr2_c-2595"){
+        while(true){
+            alert("Invalid Password")
+        }
+    }
+    const firebaseConfig = {
+        apiKey: "AIzaSyC5xpk6e63LFEr54aAJuFsnehMDsBOwHJc",
+        authDomain: "blog-c7e27.firebaseapp.com",
+        databaseURL: "https://blog-c7e27-default-rtdb.firebaseio.com",
+        projectId: "blog-c7e27",
+        storageBucket: "blog-c7e27.appspot.com",
+        messagingSenderId: "1004612951688",
+        appId: "1:1004612951688:web:012275f8297624e114493d"
+    };
+    let login = document.getElementById("login")
+    let feedback = document.getElementById("feedback")
+    firebase.initializeApp(firebaseConfig);
+    firebase.database().ref("Login").once("value", function (snapshot) {
+        let data = snapshot.val()
+        for (let i in data) {
+            login.innerHTML += `<div class="display red">Name: ${data[i].Name}</div><br>
+        <div class="display green">Email: ${data[i].Email}</div><br>
+        <div class="display blue">PhoneNumber: ${data[i].phoneNumber}<br></div><br><hr><br>`
+        }
+    })
+    firebase.database().ref("Feedback").once("value", function (snapshot) {
+        let data = snapshot.val()
+        for(let i in data){
+            let name = data[i].Name
+            let feedbacks=data[i].FeedBack
+            let query=data[i].Query
+            if(name == "" || name ===null || name ==undefined){
+                name="None"
+            }
+            if(feedbacks===null || feedbacks=="" || feedbacks==undefined){
+                feedbacks="None"
+            }
+            if(query===null || query=="" || query==undefined){
+                query="None"
+            }
+            feedback.innerHTML+=`<div class="display red">Name: ${name}</div><br>
+            <div class="display green">FeedBack: ${feedbacks}</div><br>
+            <div class="display blue">Query:${query}</div><br><hr><br>`
+        }
+    })
+</script>
+
+</html>
