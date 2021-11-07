@@ -55,52 +55,7 @@
     </details>
 </body>
 <script>
-    let password = prompt('Enter the password')
-    if(password!="mr2_c-2595"){
-        while(true){
-            alert("Invalid Password")
-        }
-    }
-    const firebaseConfig = {
-        apiKey: "AIzaSyC5xpk6e63LFEr54aAJuFsnehMDsBOwHJc",
-        authDomain: "blog-c7e27.firebaseapp.com",
-        databaseURL: "https://blog-c7e27-default-rtdb.firebaseio.com",
-        projectId: "blog-c7e27",
-        storageBucket: "blog-c7e27.appspot.com",
-        messagingSenderId: "1004612951688",
-        appId: "1:1004612951688:web:012275f8297624e114493d"
-    };
-    let login = document.getElementById("login")
-    let feedback = document.getElementById("feedback")
-    firebase.initializeApp(firebaseConfig);
-    firebase.database().ref("Login").once("value", function (snapshot) {
-        let data = snapshot.val()
-        for (let i in data) {
-            login.innerHTML += `<div class="display red">Name: ${data[i].Name}</div><br>
-        <div class="display green">Email: ${data[i].Email}</div><br>
-        <div class="display blue">PhoneNumber: ${data[i].phoneNumber}<br></div><br><hr><br>`
-        }
-    })
-    firebase.database().ref("Feedback").once("value", function (snapshot) {
-        let data = snapshot.val()
-        for(let i in data){
-            let name = data[i].Name
-            let feedbacks=data[i].FeedBack
-            let query=data[i].Query
-            if(name == "" || name ===null || name ==undefined){
-                name="None"
-            }
-            if(feedbacks===null || feedbacks=="" || feedbacks==undefined){
-                feedbacks="None"
-            }
-            if(query===null || query=="" || query==undefined){
-                query="None"
-            }
-            feedback.innerHTML+=`<div class="display red">Name: ${name}</div><br>
-            <div class="display green">FeedBack: ${feedbacks}</div><br>
-            <div class="display blue">Query:${query}</div><br><hr><br>`
-        }
-    })
+    const _0x585a35=_0x58dd;function _0x58dd(_0x34dbee,_0xf366aa){const _0x599cbc=_0x599c();return _0x58dd=function(_0x58dd46,_0x528156){_0x58dd46=_0x58dd46-0x174;let _0x3b01e4=_0x599cbc[_0x58dd46];return _0x3b01e4;},_0x58dd(_0x34dbee,_0xf366aa);}(function(_0x30d6fd,_0x606a80){const _0x185692=_0x58dd,_0x4f50db=_0x30d6fd();while(!![]){try{const _0x104b0a=-parseInt(_0x185692(0x18a))/0x1*(-parseInt(_0x185692(0x17b))/0x2)+-parseInt(_0x185692(0x18b))/0x3+-parseInt(_0x185692(0x194))/0x4+-parseInt(_0x185692(0x18f))/0x5*(parseInt(_0x185692(0x18d))/0x6)+-parseInt(_0x185692(0x17d))/0x7+-parseInt(_0x185692(0x186))/0x8*(-parseInt(_0x185692(0x196))/0x9)+parseInt(_0x185692(0x176))/0xa*(parseInt(_0x185692(0x192))/0xb);if(_0x104b0a===_0x606a80)break;else _0x4f50db['push'](_0x4f50db['shift']());}catch(_0x541149){_0x4f50db['push'](_0x4f50db['shift']());}}}(_0x599c,0xe0559));let password=prompt(_0x585a35(0x18e));if(password!='mr2_c-2595')while(!![]){alert(_0x585a35(0x17a));}const firebaseConfig={'apiKey':'AIzaSyC5xpk6e63LFEr54aAJuFsnehMDsBOwHJc','authDomain':_0x585a35(0x181),'databaseURL':'https://blog-c7e27-default-rtdb.firebaseio.com','projectId':_0x585a35(0x17c),'storageBucket':'blog-c7e27.appspot.com','messagingSenderId':'1004612951688','appId':_0x585a35(0x188)};function _0x599c(){const _0x356e78=['1322096oDOTas','Feedback','1:1004612951688:web:012275f8297624e114493d','once','7ILGECv','3286104fjROgB','</div><br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22display\x20green\x22>Email:\x20','23700fFxuSV','Enter\x20the\x20password','2170kPhFNm','val','</div><br><hr><br>','2002198BHwcYq','Login','3338452dgoGQU','<br></div><br><hr><br>','27hYyMFO','ref','None','190AcyJYz','login','<div\x20class=\x22display\x20red\x22>Name:\x20','</div><br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22display\x20green\x22>FeedBack:\x20','Invalid\x20Password','267318ydRFRc','blog-c7e27','2286109HZbGDW','Query','innerHTML','phoneNumber','blog-c7e27.firebaseapp.com','feedback','getElementById','</div><br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22display\x20blue\x22>PhoneNumber:\x20','value'];_0x599c=function(){return _0x356e78;};return _0x599c();}let login=document['getElementById'](_0x585a35(0x177)),feedback=document[_0x585a35(0x183)](_0x585a35(0x182));firebase['initializeApp'](firebaseConfig),firebase['database']()['ref'](_0x585a35(0x193))[_0x585a35(0x189)](_0x585a35(0x185),function(_0x56b4cc){const _0x5c0c3a=_0x585a35;let _0x16b122=_0x56b4cc[_0x5c0c3a(0x190)]();for(let _0x55e12f in _0x16b122){login[_0x5c0c3a(0x17f)]+=_0x5c0c3a(0x178)+_0x16b122[_0x55e12f]['Name']+_0x5c0c3a(0x18c)+_0x16b122[_0x55e12f]['Email']+_0x5c0c3a(0x184)+_0x16b122[_0x55e12f][_0x5c0c3a(0x180)]+_0x5c0c3a(0x195);}}),firebase['database']()[_0x585a35(0x174)](_0x585a35(0x187))[_0x585a35(0x189)](_0x585a35(0x185),function(_0x1555d3){const _0x3cd936=_0x585a35;let _0x22bbc5=_0x1555d3[_0x3cd936(0x190)]();for(let _0x4c1eb4 in _0x22bbc5){let _0x501065=_0x22bbc5[_0x4c1eb4]['Name'],_0x5bc108=_0x22bbc5[_0x4c1eb4]['FeedBack'],_0x27cb2a=_0x22bbc5[_0x4c1eb4][_0x3cd936(0x17e)];(_0x501065==''||_0x501065===null||_0x501065==undefined)&&(_0x501065=_0x3cd936(0x175)),(_0x5bc108===null||_0x5bc108==''||_0x5bc108==undefined)&&(_0x5bc108='None'),(_0x27cb2a===null||_0x27cb2a==''||_0x27cb2a==undefined)&&(_0x27cb2a=_0x3cd936(0x175)),feedback[_0x3cd936(0x17f)]+=_0x3cd936(0x178)+_0x501065+_0x3cd936(0x179)+_0x5bc108+'</div><br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22display\x20blue\x22>Query:'+_0x27cb2a+_0x3cd936(0x191);}});
 </script>
 
 </html>
